@@ -23,15 +23,4 @@ dowload_datomic(){
   cp resources/transactor.properties $DATOMIC_HOME/config/transactor.properties
 }
 
-push(){
-  ORIGIN=$(git remote get-url origin)
-  rm -rf .git
-  git init -b main
-  git remote add origin $ORIGIN
-  git config --local include.path ../.gitconfig
-  git add .
-  git commit -m "i am starcraft-db-to-datomic program"
-  git push -f -u origin main
-}
-
 "$@"
