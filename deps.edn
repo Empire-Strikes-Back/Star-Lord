@@ -18,8 +18,8 @@
                                      :sha "24266c05ce16c27ec3464ae6453b931aa0398a1b"}
                 nrepl/nrepl {:mvn/version "0.8.3"}
                 cider/cider-nrepl {:mvn/version "0.25.5"}}
-   :main-opts ["-m" "starcraft-db-to-datomic.main"
-               "--init-ns" "fiber.main"
+   :main-opts ["-m" "deps-repl.main"
+               "--init-ns" "starcraft-db-to-datomic.main"
                "--port" "7788"
                "--bind" "0.0.0.0"
                "--middleware" "cider.nrepl/cider-middleware"]}}}
