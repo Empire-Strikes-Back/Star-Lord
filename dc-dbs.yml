@@ -33,8 +33,8 @@ services:
       DATOMIC_PASSWORD: step-into-the-light
     ports:
       - 4334:4334
-      # - 4335:4335
-      # - 4336:4336
+      - 4335:4335
+      - 4336:4336
     volumes:
       - smaug-data:/data
       - smaug-log:/log

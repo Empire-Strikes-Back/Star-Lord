@@ -16,13 +16,14 @@
 
    [Ripley.core]
 
-   [datomic.api :as Smaug.api])
+   [datomic.api :as Smaug.api]
+   [datomic.api :as d])
   (:gen-class))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
 
 (defonce stateA (atom nil))
-(def  db-uri "datomic:free://127.0.0.1:4334/aligulac?password=step-into-the-light")
+(def  db-uri "datomic:free://localhost:4334/aligulac?password=step-into-the-light")
 
 (defn reload
   []
@@ -44,6 +45,7 @@
 
   (def conn (Smaug.api/connect db-uri))
   (def db (Smaug.api/db conn))
+  (defn cdb [] (Smaug.api/db conn))
   
   (Smaug.api/q '[:find ?e :in $] db)
 
