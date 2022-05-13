@@ -17,7 +17,12 @@
    [Ripley.core]
 
    [datomic.api :as Smaug.api]
-   [datomic.api :as d])
+
+   [Star-Lord.psql]
+   [Star-Lord.conn :refer [conn db cdb]]
+   [Star-Lord.schema]
+   [Star-Lord.query]
+   [Star-Lord.etl])
   (:gen-class))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
@@ -29,6 +34,11 @@
   []
   (require
    '[Star-Lord.seed]
+   '[Star-Lord.schema]
+   '[Star-Lord.etl]
+   '[Star-Lord.conn]
+   '[Star-Lord.psql]
+   '[Star-Lord.query]
    '[Star-Lord.main]
    :reload))
 
@@ -46,7 +56,7 @@
   (def conn (Smaug.api/connect db-uri))
   (def db (Smaug.api/db conn))
   (defn cdb [] (Smaug.api/db conn))
-  
+
   (Smaug.api/q '[:find ?e :in $] db)
 
 

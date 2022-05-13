@@ -1,5 +1,5 @@
 #_(ns starcraft-db-to-datomic.main
-  (:require [datomic.api :as d]
+  (:require [datomic.api :as Smaug.api]
             [starcraft-db-to-datomic.nrepl]
             [starcraft-db-to-datomic.psql]
             [starcraft-db-to-datomic.conn :refer [conn db]]
@@ -18,10 +18,10 @@
 
 
 
-  (d/create-database db-uri-aligulac)
-; (d/create-database db-uri-tutorial)
-; (d/create-database db-uri-movies)
-; (d/create-database db-uri-seattle)
+  (Smaug.api/create-database db-uri-aligulac)
+; (Smaug.api/create-database db-uri-tutorial)
+; (Smaug.api/create-database db-uri-movies)
+; (Smaug.api/create-database db-uri-seattle)
 
   ;
   )

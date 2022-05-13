@@ -9,7 +9,7 @@ volumes:
 services:
 
   Griphook:
-    image: postgres
+    image: postgres:14.2
     # restart: always
     environment:
       POSTGRES_USER: aligulac
@@ -21,7 +21,7 @@ services:
       - griphook:/var/lib/postgresql/data
 
   Rain-Man:
-    image: adminer
+    image: adminer:4.8.1
     # restart: always
     ports:
       - 8200:8080
