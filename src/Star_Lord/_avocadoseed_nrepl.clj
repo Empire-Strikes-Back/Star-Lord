@@ -1,4 +1,4 @@
-(ns starcraft-db-to-datomic.nrepl 
+#_(ns starcraft-db-to-datomic.nrepl 
   (:require [nrepl.server :refer [start-server stop-server]]
             [clojure.repl :refer :all]))
 

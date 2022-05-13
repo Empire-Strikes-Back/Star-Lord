@@ -1,6 +1,6 @@
 
 
-(ns core.schema 
+#_(ns core.schema 
   (:require [datomic.api :as d]
             [starcraft-db-to-datomic.conn :refer [conn db cdb]]
             [clojure.repl :refer :all]))

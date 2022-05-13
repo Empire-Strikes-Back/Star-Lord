@@ -1,4 +1,4 @@
-(ns starcraft-db-to-datomic.psql
+#_(ns starcraft-db-to-datomic.psql
   (:require [clojure.repl :refer :all]
             [clojure.java.jdbc :as jdbc]
             [clojure.pprint :as pp]

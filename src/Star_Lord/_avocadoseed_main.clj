@@ -1,4 +1,4 @@
-(ns starcraft-db-to-datomic.main
+#_(ns starcraft-db-to-datomic.main
   (:require [datomic.api :as d]
             [starcraft-db-to-datomic.nrepl]
             [starcraft-db-to-datomic.psql]

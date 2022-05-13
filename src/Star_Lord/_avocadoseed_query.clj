@@ -1,4 +1,4 @@
-(ns starcraft-db-to-datomic.query
+#_(ns starcraft-db-to-datomic.query
   (:require [datomic.api :as d]
             [clojure.repl :refer :all]
             [clojure.pprint :as pp]
