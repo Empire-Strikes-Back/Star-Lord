@@ -1,0 +1,40 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+volumes:
+  griphook:
+  smaug-data:
+  smaug-log:
+
+services:
+
+  Griphook:
+    image: postgres
+    # restart: always
+    environment:
+      POSTGRES_USER: aligulac
+      POSTGRES_PASSWORD: aligulac
+      POSTGRES_DB: aligulac
+    ports:
+      - 5432:5432
+    volumes:
+      - griphook:/var/lib/postgresql/data
+
+  Rain-Man:
+    image: adminer
+    # restart: always
+    ports:
+      - 8200:8080
+
+  Smaug:
+    image: akiel/datomic-free:0.9.5656
+    environment:
+      ADMIN_PASSWORD: step-into-the-light
+      DATOMIC_PASSWORD: step-into-the-light
+    ports:
+      - 4334:4334
+      # - 4335:4335
+      # - 4336:4336
+    volumes:
+      - smaug-data:/data
+      - smaug-log:/log

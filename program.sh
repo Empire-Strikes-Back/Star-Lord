@@ -42,7 +42,7 @@ download_aligulac(){
 }
 
 load_aligulac_into_psql(){
-    gunzip -c ./data/aligulac.sql.gz | PGPASSWORD=postgres psql -h postgresdb -p 5432 -d aligulac -U aligulac 
+    gunzip -c ./data/aligulac.sql.gz | PGPASSWORD=aligulac psql -h 127.0.0.1 -p 5432 -d aligulac -U aligulac 
     #  psql -h postgresdb -p 5432 -d aligulac -c  "CREATE ROLE aligulac"
 }
 

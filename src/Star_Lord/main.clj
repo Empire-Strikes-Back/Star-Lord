@@ -14,12 +14,15 @@
    [Star-Lord.seed]
    [Star-Lord.avocado]
 
-   [Ripley.core])
+   [Ripley.core]
+
+   [datomic.api :as Smaug.api])
   (:gen-class))
 
 (do (set! *warn-on-reflection* true) (set! *unchecked-math* true))
 
 (defonce stateA (atom nil))
+(def  db-uri "datomic:free://127.0.0.1:4334/aligulac?password=step-into-the-light")
 
 (defn reload
   []
@@ -34,3 +37,16 @@
   (println "oh, i'm sorry - i dont know how this machine works")
   #_(println "Kuiil has spoken")
   (Ripley.core/process {:main-ns 'Star-Lord.main}))
+
+(comment
+
+  (Smaug.api/create-database db-uri)
+
+  (def conn (Smaug.api/connect db-uri))
+  (def db (Smaug.api/db conn))
+  
+  (Smaug.api/q '[:find ?e :in $] db)
+
+
+  ;
+  )
