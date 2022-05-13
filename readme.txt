@@ -1,1 +1,2 @@
-i am starcraft2-db-to-datomic program - i put Starcraft2 aligulac db into datomic to find out the date when Scarlett offracing as protoss beat DongRaeGu 2:1
+:Rhomann-Dey hey! if it isn't Star-Prince
+:_ Star-Lord

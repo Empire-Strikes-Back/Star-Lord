@@ -1,5 +1,6 @@
 [user]
-	email = starcraft-db-to-datomic@program
-	name = starcraft-db-to-datomic
+	name = Star-Lord
+	email = Star-Lord@one-sandwich-away-from-fat
+
 
 # git config --local include.path ../.gitconfig
